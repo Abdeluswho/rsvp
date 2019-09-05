@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import GuestName from './GuestName'
 
-const Guest = ({ name, isConfirmed, isEditing, handleConfirmation, handleToggleEditing, setName }) =>  
+const Guest = ({ name, isConfirmed, isEditing, handleConfirmation, handleToggleEditing, setName, handleRemove }) =>  
 
             <li>
                 <GuestName 
@@ -19,7 +19,7 @@ const Guest = ({ name, isConfirmed, isEditing, handleConfirmation, handleToggleE
                         onChange = { handleConfirmation } /> Confirmed
                 </label>
                 <button onClick = { handleToggleEditing } >{ isEditing ? "Save" : "Edit" }</button>
-                <button>remove</button>
+                <button onClick = { handleRemove }>remove</button>
             </li>
 
 Guest.propTypes = {
@@ -28,7 +28,8 @@ Guest.propTypes = {
     isEditing: PropTypes.bool.isRequired,
     handleConfirmation : PropTypes.func.isRequired,
     handleToggleEditing: PropTypes.func.isRequired,
-    setName: PropTypes.func.isRequired
+    setName: PropTypes.func.isRequired,
+    handleRemove: PropTypes.func.isRequired
 }
 
 export default Guest

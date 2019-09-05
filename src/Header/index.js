@@ -8,7 +8,7 @@ import GuestInput from './GuestInput'
 const Header = ( { pendingGuest, inputChange, submitHandler} ) => 
     <header>
         <h1>RSVP</h1>
-        <p>A Treehouse App</p>
+        <p>A React App</p>
 
         <GuestInput 
             pendingGuest = { pendingGuest }

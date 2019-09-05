@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import GuestName from './GuestName'
 
+
 const Guest = ({ name, isConfirmed, isEditing, handleConfirmation, handleToggleEditing, setName, handleRemove }) =>  
 
             <li>
